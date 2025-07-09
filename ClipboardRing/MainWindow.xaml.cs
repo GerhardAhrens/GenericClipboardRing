@@ -16,6 +16,7 @@
 namespace ClipboardRing
 {
     using System.ComponentModel;
+    using System.Reflection;
     using System.Runtime.CompilerServices;
     using System.Windows;
     using System.Windows.Controls;
@@ -115,6 +116,7 @@ namespace ClipboardRing
 
         private void CopyContent(object sender, RoutedEventArgs e)
         {
+            PropertyInfo[] aa = this.GetType().GetProperties(System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Instance );
         }
 
         private void PasteContent(object sender, RoutedEventArgs e)
